@@ -1,0 +1,44 @@
+@use '../main.scss' as *;
+
+.contact-us {
+  max-width: 1440px;
+  background-color: #fafafa;
+
+  &__container {
+    max-width: 79.571em;
+    margin: 0 auto;
+    padding: 2.857em 2.286em;
+
+    @media screen and (max-width: 425px) {
+      padding: 2.857em 6.429em;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 64.643em;
+
+    @media screen and (max-width: 600px) {
+      justify-content: center;
+      gap: 3.571em;
+    }
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__text {
+    margin: 0;
+    @include font-par;
+
+    @media screen and (max-width: 425px) {
+      max-width: 13.143em;
+    }
+  }
+}

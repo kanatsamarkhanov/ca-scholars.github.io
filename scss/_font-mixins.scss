@@ -1,0 +1,59 @@
+@use 'vars.scss' as *;
+
+@mixin font-h1 {
+  color: $text-color;
+  font: 900 4.143rem/1.12 $main-font-family;
+}
+
+@mixin font-h2 {
+  color: $text-color;
+  font: 700 2.857rem/1.25 $main-font-family;
+}
+
+@mixin font-h3 {
+  color: $text-color;
+  font: 700 1.714rem/1.33 $main-font-family;
+}
+
+@mixin font-h4 {
+  color: $second-text-color;
+  font: 500 1.429rem/1.5 $third-font-family;
+}
+
+@mixin font-h5 {
+  color: $text-color;
+  font: 700 1.143em/1.5 $main-font-family;
+}
+
+@mixin font-h6 {
+  color: $second-text-color;
+  font: 700 1rem/1.71 $secondary-font-family;
+}
+
+@mixin font-par {
+  color: $second-text-color;
+  font: 400 1rem/1.43 $secondary-font-family;
+}
+
+@mixin font-link {
+  color: $second-text-color;
+  font: 600 1rem/1.71 $secondary-font-family;
+}
+
+@mixin font-btn {
+  font: 700 1rem/2 $secondary-font-family;
+}
+
+@mixin font-subs {
+  font: 400 1rem/2 $third-font-family;
+}
+
+@mixin font-mail {
+  color: $text-color;
+  font: 700 1rem/1.71 $secondary-font-family;
+}
+
+@mixin font-menu-mobile {
+  color: $second-text-color;
+  font: 400 2.143em/45px $secondary-font-family;
+}

@@ -1,0 +1,14 @@
+.cart {
+  display: inline-block;
+  width: 1.143em;
+
+  @media screen and (max-width: 600px) {
+    width: 19px;
+  }
+
+  &__img {
+    @media screen and (max-width: 600px) {
+      width: 24px;
+    }
+  }
+}

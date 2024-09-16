@@ -1,0 +1,74 @@
+@use '../main.scss' as *;
+
+.subscribe {
+  width: 100%;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1.143em 2.286em;
+    padding: 2.143em 3.786em;
+    background-image: linear-gradient(270deg, #295C7A -1.04%, #0072B5 100%);
+    border-radius: 2px;
+
+    @media screen and (max-width: 700px) {
+      justify-content: center;
+      gap: 30px;
+      margin: 0;
+      padding: 2.143em 2.714em;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-basis: 51%;
+    max-height: 60px;
+    border: 1px solid $border-input-color;
+    border-radius: 5px;
+
+    @media screen and (max-width: 700px) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__label-email {
+    flex-basis: 74%;
+
+    @media screen and (max-width: 700px) {
+      flex-basis: 66%;
+    }
+  }
+
+  &__label-submit {
+    flex-basis: 26%;
+
+    @media screen and (max-width: 700px) {
+      flex-basis: 34%;
+    }
+  }
+
+  &__input-email {
+    width: 100%;
+    height: 100%;
+    padding: 1.071em 1.429em;
+    background-color: $lighter-background-color;
+    @include font-subs;
+    border: none;
+    outline: none;
+
+    @media screen and (max-width: 700px) {
+      padding: 1.357em 1.429em;
+    }
+  }
+
+  &__input-submit {
+    width: 100%;
+    height: 100%;
+    color: $light-text-color;
+    background-color: $primary-color;
+    @include font-subs;
+    border: none;
+    outline: none;
+  }
+}

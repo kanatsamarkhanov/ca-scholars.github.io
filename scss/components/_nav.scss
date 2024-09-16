@@ -1,0 +1,86 @@
+@use '../main.scss' as *;
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.786em;
+
+  @media screen and (max-width: 600px) {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  &__hamburger-checkbox {
+    display: none;
+
+    &:checked ~ .nav__list {
+      @media screen and (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-basis: 100%;
+        max-height: 45.714em;
+        padding: 4em 1.429em 7em;
+      }
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    cursor: pointer;
+
+    @media screen and (max-width: 600px) {
+      display: block;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.786em;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @media screen and (max-width: 600px) {
+      max-height: 0;
+      overflow: hidden;
+      text-align: center;
+      background-color: #f6f6f6;
+      gap: 2.143em;
+    }
+  }
+
+  &__list-item {
+    @media screen and (max-width: 600px) {
+      max-height: 45px;
+    }
+  }
+
+  &__link {
+    @include font-link;
+
+    &:hover {
+      color: $text-color;
+    }
+
+    @media screen and (max-width: 600px) {
+      @include font-menu-mobile;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.286em;
+
+    @media screen and (max-width: 600px) {
+      order: -1;
+      gap: 2.071em;
+    }
+  }
+}

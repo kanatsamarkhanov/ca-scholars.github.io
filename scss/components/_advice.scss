@@ -1,0 +1,59 @@
+@use '../main.scss' as *;
+
+.advice {
+  max-width: 1440px;
+  background-color: #fafafa;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 81em;
+    margin: 0 auto;
+    padding: 5.714em 3em 7.357em;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 3.5em;
+    }
+
+    @media screen and (max-width: 425px) {
+      padding-bottom: 13.5em;
+    } 
+  }
+
+  &__heading-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.714em;
+    padding: 3.571em 0 3.214em;
+
+    @media screen and (max-width: 425px) {
+      padding: 3.571em 2.143em 5.357em;
+    }
+  }
+
+  &__info {
+    max-width: 31.929em;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.2px;
+    @include font-par;
+
+    @media screen and (max-width: 425px) {
+      max-width: 17.286em;
+    }
+  }
+
+  &__card-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px;
+
+    @media screen and (max-width: 1050px) {
+      justify-content: center;
+      gap: 26px;
+    }
+  }
+}

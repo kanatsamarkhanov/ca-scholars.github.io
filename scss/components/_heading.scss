@@ -1,0 +1,64 @@
+@use '../main.scss' as *;
+
+.heading {
+  margin: 0;
+
+  &_h2 {
+    @include font-h2;
+
+    @media screen and (max-width: 600px) {
+      text-align: center;
+    }
+  }
+
+  &_h3 {
+    @include font-h3;
+  }
+
+  &_h5 {
+    @include font-h5;
+  }
+
+  &_h6 {
+    @include font-h6;
+  }
+
+  &_advantages {
+    letter-spacing: -0.2px;
+  }
+
+  &_subs {
+    color: $light-text-color;
+    max-width: 253px;
+
+    @media screen and (max-width: 425px) {
+      text-align: center;
+    }
+  }
+
+  &_dark {
+    color: $light-text-color;
+  }
+
+  &_footer-list {
+    color: $light-text-color;
+  }
+
+  &_advice {
+    max-width: 7.813em;
+
+    @media screen and (max-width: 1199px) {
+      max-width: 100%;
+    }
+  }
+
+  &_advantages {
+    @media screen and (max-width: 425px) {
+      text-align: left;
+    }
+  }
+
+  &_copyrights {
+    letter-spacing: 0.2px;
+  }
+}

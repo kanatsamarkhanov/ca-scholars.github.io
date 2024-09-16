@@ -1,0 +1,112 @@
+@use '../main.scss' as *;
+
+.practice {
+  max-width: 1440px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 5.714em;
+    max-width: 81em;
+    margin: 0 auto;
+    padding:  7.071em 3em 6.857em;
+
+    @media screen and (max-width: 600px) {
+      padding-top: 10.429em;
+      gap: 5.357em;
+    }
+
+    @media screen and (max-width: 425px) {
+      padding-bottom: 7.071em;
+    }
+  }
+
+  &__heading-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.714em;
+  }
+
+  &__info {
+    max-width: 31.929em;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.2px;
+    @include font-par;
+
+    @media screen and (max-width: 425px) {
+      max-width: 17.214em;
+    }
+  }
+
+  &__card-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+      gap: 30px;
+      width: 100%;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-basis: 32%;
+    padding: 30px 0;
+    background-color: $lighter-background-color;
+    border-radius: 5px;
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+    transition-duration: 0.3s;
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: $secondary-color-4;
+    }
+
+    &:hover  > .heading_h5 {
+      color: $light-text-color;
+    }
+
+    &:hover .practice__card-icon_family-low {
+      background-image: url('../img/balance-img-hover.png');
+    }
+
+    &:hover .practice__card-icon_business-low {
+      background-image: url('../img/auction-img-hover.png');
+    }
+
+    &:hover .practice__card-icon_trust {
+      background-image: url('../img/accept-img-hover.png');
+    }
+  }
+
+  &__card-icon {
+    width: 53px;
+    height: 53px;
+
+    &_family-low {
+      background-image: url('../img/balance-img.png');
+    }
+
+    &_business-low {
+      background-image: url('../img/auction-img.png');
+    }
+
+    &_trust {
+      background-image: url('../img/accept-img.png');
+    }
+  }
+}

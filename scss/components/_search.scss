@@ -1,0 +1,10 @@
+.search {
+  display: inline-block;
+  width: 1.429em;
+
+  &__img {
+    @media screen and (max-width: 600px) {
+      width: 24px;
+    }
+  }
+}

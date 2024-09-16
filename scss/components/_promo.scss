@@ -1,0 +1,96 @@
+@use '../main.scss' as *;
+
+.promo {
+  width: 100%;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    max-width: 1142px;
+    margin: 0 auto;
+    padding: 0 20px 0 48px;
+
+    @media screen and (max-width: 690px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 6em 1.286em 0;
+    }
+
+    @media screen and (max-width: 425px) {
+      gap: 5.5em;
+    }
+
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2.5em;
+    max-width: 36.357em;
+
+    @media screen and (max-width: 930px) {
+      padding-bottom: 2.143em;
+    }
+
+    @media screen and (max-width: 690px) {
+      align-items: center;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+    @include font-h1;
+
+    @media screen and (max-width: 690px) {
+      @include font-h2;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 417px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__info-text {
+    max-width: 20em;
+    margin: 0;
+    @include font-h4;
+
+    @media screen and (max-width: 690px) {
+      text-align: center;
+    }
+  }
+
+  &__button-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-basis: 3.643em;
+
+    @media screen and (max-width: 690px) {
+      flex-direction: column;
+      gap: 1.5em;
+    }
+  }
+
+  &__img-block {
+    max-width: 41.786em;
+    align-self: flex-end;
+
+    @media screen and (max-width: 690px) {
+      max-width: 29.571em;
+    }
+
+    @media screen and (max-width: 425px) {
+      max-width: 26.5em;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

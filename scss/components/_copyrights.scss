@@ -1,0 +1,36 @@
+@use '../main.scss' as *;
+
+.copyrights {
+  max-width: 1440px;
+  background-color: #fafafa;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 1.714em 2.857em 1.786em 0;
+
+    @media screen and (max-width: 1100px) {
+      padding: 1.786em 6.536em 2.857em;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 3.571em;
+      padding-bottom: 7.929em;
+    }
+
+    @media screen and (max-width: 425px) {
+      align-items: flex-start;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
